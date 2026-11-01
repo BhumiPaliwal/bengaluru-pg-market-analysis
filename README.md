@@ -423,16 +423,25 @@ Model Persistence
 
 bengaluru-pg-market-analysis/
 │
-├── Bengaluru_PG_Market_Analysis (2).pptx
-├── Final_PG_Dataset.csv
-├── Raw_PG_Dataset.csv
-├── PG_Market_Analysis.ipynb
-├── app1.py
+├── app/
+│   └── app1.py
 │
-├── cluster_classifier.pkl
-├── kmeans_model.pkl
-├── preprocessor.pkl
+├── data/
+│   ├── Final_PG_Dataset.csv
+│   └── Raw_PG_Dataset.csv
 │
+├── models/
+│   ├── preprocessor.pkl
+│   ├── kmeans_model.pkl
+│   └── cluster_classifier.pkl
+│
+├── notebooks/
+│   └── PG_Market_Analysis.ipynb
+│
+├── presentation/
+│   └── Bengaluru_PG_Market_Analysis (2).pptx
+│
+├── README.md
 ├── requirements.txt
 └── .gitignore
 
@@ -454,7 +463,7 @@ pip install -r requirements.txt
 
 4. Run the Streamlit application
 
-streamlit run app1.py
+streamlit run app/app1.py
 
 ---
 
