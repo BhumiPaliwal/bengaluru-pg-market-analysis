@@ -50,10 +50,15 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-DATA_PATH = "Final_PG_Dataset.csv"
-PREPROCESSOR_PATH = "preprocessor.pkl"
-KMEANS_PATH = "kmeans_model.pkl"
-CLASSIFIER_PATH = "cluster_classifier.pkl"
+# ------------------------------------------------------------------
+# PROJECT PATHS
+# ------------------------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DATA_PATH = os.path.join(BASE_DIR, "data", "Final_PG_Dataset.csv")
+PREPROCESSOR_PATH = os.path.join(BASE_DIR, "models", "preprocessor.pkl")
+KMEANS_PATH = os.path.join(BASE_DIR, "models", "kmeans_model.pkl")
+CLASSIFIER_PATH = os.path.join(BASE_DIR, "models", "cluster_classifier.pkl")
 
 DEFAULT_CLUSTER_FEATURES = [
     "Monthly_Rent", "Distance_to_IT_Park_km", "Distance_to_Metro_km",
